@@ -1,0 +1,34 @@
+{
+    "Linea":[ {
+        "nombre": "linea 2",
+        "_id":2,
+        "fecha": "Fri Apr 12 2013 19:08:55 GMT-0500 (CDT)",
+        "estacion": [
+            {
+                "_id":"1",
+                "nombre": "Panteones",
+                "crowd": 10
+            },
+            {
+                "_id":"2",
+                "nombre": "Cuatro Caminos",
+                "crowd": 80
+            },
+            {
+                "_id":"3",
+                "nombre": "Tacuba",
+                "crowd": 20.9
+            },
+            {
+                "_id":"4",
+                "nombre": "Cuitlahuac",
+                "crowd": 33.2
+            },
+            {
+                "_id":"5",
+                "nombre": "Popotla",
+                "crowd": 9.80
+            }
+        ]
+    }]
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HackFront</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  
+</head>
+<body>
+  <app-root></app-root>
+</body>
+
+
+<script>
+
+function example(nameRoute){
+
+  var lineas=document.getElementById("lineas");
+  var avisos=document.getElementById("avisos");;
+
+  if(nameRoute=='lineas'){
+    lineas.classList.add("lineas");
+    avisos.classList.remove("avisos");
+
+  }else if(nameRoute=='avisos'){
+    avisos.classList.add("avisos");
+    lineas.classList.remove("lineas");
+  }
+}
+
+</script>
+</html>

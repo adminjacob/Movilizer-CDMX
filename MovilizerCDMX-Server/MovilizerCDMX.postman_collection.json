@@ -1,0 +1,229 @@
+{
+	"info": {
+		"_postman_id": "72169269-3674-4e3c-a084-2d02ac129cf5",
+		"name": "MovilizerCDMX",
+		"description": "HackMX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Line Actions",
+			"item": [
+				{
+					"name": "Get Lines",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/lines/lines",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"lines",
+								"lines"
+							]
+						},
+						"description": "Checked"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Line",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 1,\n\t\"name\": \"Line Name\",\n\t\"from_to\": \"Station1 - Station 2\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/lines/new",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"lines",
+								"new"
+							]
+						},
+						"description": "Checked"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Station to Line",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Station name\",\n\t\"data\": [\n\t\t{\"way\": \"Station1\"},\n\t\t{\"way\": \"Station2\"}\n\t]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/lines/stations/idLine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"lines",
+								"stations",
+								"idLine"
+							]
+						},
+						"description": "Checked"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Stations of Line",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/lines/line/idLine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"lines",
+								"line",
+								"idLine"
+							]
+						},
+						"description": "Checked"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Station Actions",
+			"item": [
+				{
+					"name": "Add Info",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Observatorio\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/stations/info",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"stations",
+								"info"
+							]
+						},
+						"description": "Unused"
+					},
+					"response": []
+				},
+				{
+					"name": "Python Test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/python/station/5cd1b1e9ddf8e10565641a1a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"python",
+								"station",
+								"5cd1b1e9ddf8e10565641a1a"
+							]
+						},
+						"description": "Testing"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Twitter Actions",
+			"item": [
+				{
+					"name": "Get Tweets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/twitter/tweets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"twitter",
+								"tweets"
+							]
+						},
+						"description": "Checked"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "64c874c6-7b30-4247-9eb9-dda6b71fbc7c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "141eb8c9-6d19-4001-bde1-25826aae4242",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

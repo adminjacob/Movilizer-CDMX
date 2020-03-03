@@ -1,0 +1,17 @@
+
+<div class="container my-5">
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-12 mt-2"  *ngFor="let linea of lineas" >
+
+        <div class="hovereffect" >
+            <a [routerLink]="'/line/'+linea.id">
+                <img [src]="linea.image" alt="" class="img-fluid">
+            </a>
+            <div class="overlay">
+              <h2>{{linea.nombre}}</h2>
+              <a class="info" [routerLink]="'/line/'+linea.id"></a>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

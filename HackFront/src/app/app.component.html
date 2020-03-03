@@ -1,0 +1,53 @@
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand mx-auto" [routerLink]="'/start'">
+        <img src="/assets/images/metro.png" class="d-inline-block align-top" width="40" height="40" alt=" ">
+        &nbsp; Movilizer CDMX
+    </a>
+</nav>
+
+<br>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
+
+            <figure>
+                <a [routerLink]="'/start'" onClick="example('lineas')">
+                    <i class="fas fa-subway fa-4x" style="color:#FF8D00"></i>
+                </a>
+                <figcaption id="lineas" >Lineas</figcaption>
+                
+            </figure>
+
+
+
+
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">
+
+            <figure>
+                <a [routerLink]="'/twitter'"  onClick="example('avisos')">
+                    <i class="fas fa-exclamation-triangle fa-4x" style="color:#FFCC00"></i>
+                </a>
+                <figcaption id="avisos">Avisos</figcaption>
+               
+            </figure>
+
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+    
+
+</div>
+<hr>
+
+<router-outlet></router-outlet>

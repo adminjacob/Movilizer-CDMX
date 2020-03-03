@@ -1,0 +1,69 @@
+<div class="row" *ngIf="linea">
+
+    <div class="container col-lg-5 col-sm-5 col-md-5 col-xs-5">
+        <br>
+        <div class="card">
+            <div class="card-header">
+
+                {{linea[0].data[0].way}}
+
+
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+
+                    <li class="list-group-item" *ngFor="let estacion of linea">
+                        <div>
+                            <div class="d-inline-block">
+                                {{estacion.name}}
+                            </div>
+                            <div class="d-inline-block" style="float: right;">
+                                <span *ngIf="estacion.data[0].crowdPercent*100==0" class="badge badge-success">Muy bajo</span>
+                                <span *ngIf="estacion.data[0].crowdPercent*100>0 && estacion.data[0].crowdPercent*100<=33" class="badge badge-warning">Moderado</span>
+                                <span *ngIf="estacion.data[0].crowdPercent*100>33 && estacion.data[0].crowdPercent*100<=66" class="badge" style="color:white; background-color:#FF7633;">Muy alto</span>
+                                <span *ngIf="estacion.data[0].crowdPercent*100>66" class="badge badge-danger">Saturado</span>
+
+                            </div>
+                        </div>
+
+
+
+
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container col-lg-5 col-sm-5 col-md-5 col-xs-5">
+        <br>
+        <div class="card">
+            <div class="card-header">
+
+                {{linea[1].data[1].way}}
+
+
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+
+                    <li class="list-group-item" *ngFor="let estacion of linea">
+                        <div>
+                            <div class="d-inline-block">
+                                {{estacion.name}}
+                            </div>
+                            <div class="d-inline-block" style="float: right;">
+                                <span *ngIf="estacion.data[1].crowdPercent*100==0" class="badge badge-success">Muy bajo</span>
+                                <span *ngIf="estacion.data[1].crowdPercent*100>0 && estacion.data[1].crowdPercent*100<=33" class="badge badge-warning">Moderado</span>
+                                <span *ngIf="estacion.data[1].crowdPercent*100>33 && estacion.data[1].crowdPercent*100<=66" class="badge" style="color:white; background-color:#FF7633;">Muy alto</span>
+                                <span *ngIf="estacion.data[1].crowdPercent*100>66" class="badge badge-danger">Saturado</span>
+
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
